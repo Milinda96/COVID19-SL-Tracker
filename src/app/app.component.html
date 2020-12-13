@@ -1,3 +1,85 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-content [fullscreen]="true">
+  <Particles [id]="id" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)"></Particles>
+  <ion-header class="ion-no-border">
+    <ion-toolbar color="danger">
+      <ion-title>COVID-19 SriLanka Tracker</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card color="primary" style="height: 15rem">
+          <ion-card-header style="text-align: center; padding-top: 3.5rem">
+            <ion-card-title style="font-weight: bold">COVID-19 ශ්‍රී ලංකා තත්ත්ව වාර්තාව</ion-card-title>
+            <ion-card-subtitle style="font-weight: bold; font-size: 1.5rem">Last Updated Time</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content style="text-align: center; font-weight: bold; font-size: 1.5rem">
+            {{ this.state?.update_date_time }}</ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card color="warning" style="height: 18rem">
+          <ion-card-header style="text-align: center; padding-top: 3rem">
+            <ion-icon size="large" style="color: black" name="medkit"></ion-icon>
+            <ion-card-title style="font-weight: bold; text-align: center; color: black">ප්‍රතිකාර ලබන රෝගීන් සංඛ්‍යාව
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="text-align: center">
+            <ion-badge style="font-size: 2em; color: black" color="tertiary">{{ this.state?.local_active_cases }}
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="danger" style="height: 18rem">
+          <ion-card-header style="text-align: center; padding-top: 3rem">
+            <ion-icon size="large" style="color: black" name="sad"></ion-icon>
+            <ion-card-title style="font-weight: bold; text-align: center; color: black">මරණ සංඛ්‍යාව</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="text-align: center">
+            <ion-badge style="font-size: 2em; color: black" color="success">{{
+              this.state?.local_deaths
+            }}</ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="tertiary" style="height: 18rem">
+          <ion-card-header style="text-align: center; padding-top: 3rem">
+            <ion-icon size="large" style="color: black" name="fitness"></ion-icon>
+            <ion-card-title style="font-weight: bold; text-align: center; color: black">නවතම වාර්තාවීම්
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="text-align: center">
+            <ion-badge style="font-size: 2em; color: black" color="warning">{{ this.state?.local_new_cases }}
+            </ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="success" style="height: 18rem">
+          <ion-card-header style="text-align: center; padding-top: 3rem">
+            <ion-icon size="large" style="color: black" name="shield-checkmark"></ion-icon>
+            <ion-card-title style="font-weight: bold; text-align: center; color: black">සුවය ලැබූ සංඛ්‍යාව
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="text-align: center">
+            <ion-badge style="font-size: 2em; color: black" color="danger">{{
+              this.state?.local_recovered
+            }}</ion-badge>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-footer class="ion-no-border">
+    <ion-toolbar color="danger">
+      <ion-title style="text-align: center">Made with ❤ by Milinda Senaka | Powered by hpb.health.gov.lk</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
