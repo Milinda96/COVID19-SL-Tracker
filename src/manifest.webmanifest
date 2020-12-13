@@ -30,6 +30,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-1080x1920.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "purpose": "maskable any"
     }
   ]
 }

@@ -58,6 +58,6 @@ export class HomePage implements OnInit {
       }
 
       await container.refresh();
-    }, 5);
+    }, 50);
   }
 }
