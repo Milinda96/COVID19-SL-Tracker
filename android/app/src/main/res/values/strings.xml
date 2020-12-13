@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">covid19-sl-tracker</string>
-    <string name="title_activity_main">covid19-sl-tracker</string>
+    <string name="app_name">COVID19 SL Tracker</string>
+    <string name="title_activity_main">COVID19 SL Tracker</string>
     <string name="package_name">com.covid19sl.com</string>
     <string name="custom_url_scheme">com.covid19sl.com</string>
 </resources>
