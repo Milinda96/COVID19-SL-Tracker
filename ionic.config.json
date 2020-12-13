@@ -1,0 +1,7 @@
+{
+  "name": "covid19-sl-tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
